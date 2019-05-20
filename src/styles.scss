@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+$app-font: Roboto, "Helvetica Neue", sans-serif;
+
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 30px; 
+    font-family: $app-font; 
+}
+
+.form-container {
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    box-shadow: 5px 5px #888888;
+  }
+
+  .form-container > * {
+    width: 100%;
+  }

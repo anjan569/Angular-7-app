@@ -4,15 +4,49 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { WelcomeComponent } from './welcome/welcome.component';
+import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
+import { ProductModule } from './product/product.module';
+import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthService } from './services/auth.service';
+import { RoleGuard } from './guards/role-guard.service';
+import { FormsModule } from '@angular/forms';
+import { MaterialModule } from './shared/material.module';
+import { EventsComponent } from './events/events.component';
+import { EventDetailsComponent } from './event-details/event-details.component';
+import { GooglePlacesDirective } from './google-places.directive';
+// import { CcLogoDirective } from './cc-logo.directive';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    HeaderNavComponent,
+    ContactComponent,
+    OrderComponent,
+    LoginComponent,
+    PageNotFoundComponent,
+    EventsComponent,
+    EventDetailsComponent,
+    GooglePlacesDirective,
+    // CcLogoDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
