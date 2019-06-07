@@ -1,0 +1,31 @@
+<!-- <form >
+<mat-form-field>
+  <input matInput placeholder="UserName" >
+</mat-form-field>
+<mat-form-field>
+ <input matInput placeholder="Password" >
+</mat-form-field>
+<mat-form-field> 
+  <button mat-raised-button (click)="login()">Normal User Log in </button> |
+</mat-form-field>
+</form> -->
+<!-- <p>
+  
+    UserName: <input type="text" id="username" name="username" [(ngModel)]="username">
+    Password: <input type="text" id="password" name="password" [(ngModel)]="password">
+   <button (click)="login()">Normal User Log in </button> | -->
+  <!-- <button (click)="loginAdmin()">Admin User Log in </button> -->
+<!-- </p> -->
+
+<div class="form-container">
+  <mat-form-field>
+    <mat-icon matPrefix>person</mat-icon>
+    <input matInput placeholder="UserName" [(ngModel)]="username" name="username">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="password" name="password">
+    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="login()"> Login </button>
+</div>

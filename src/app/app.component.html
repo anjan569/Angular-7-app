@@ -5,20 +5,21 @@
   </h1>
 </div>
 <header-nav></header-nav>
-<div class="input-container">
+<ad-banner [ads]="ads"></ad-banner>
+<!-- <div class="input-container">
     <input 
     type="text"
     class="google-place-input"
     google-place
     (onSelect)="setAddress($event)"
     placeholder="Type to search..">
-    <!-- Displaying the contents of the address object received from our event emitter -->
+    Displaying the contents of the address object received from our event emitter
     <ul style="list-style-type: none;">
       <li *ngFor="let key of addrKeys">
         <span style="font-weight: bold">{{key}}</span>: <span>{{addr[key]}}</span>
       </li>
     </ul>
-</div>
+</div> -->
 <!-- 
 <div class="container">
   <h1>RSVP</h1>

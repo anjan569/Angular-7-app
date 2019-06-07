@@ -1,3 +1,8 @@
+import { FeedService } from './services/feed.service';
+import { AdService } from './services/ad.service';
+import { AdDirective } from './shared/ad.directive';
+import { HeroProfileComponent } from './ad-banner/hero-profile.component';
+import { HeroJobAdComponent } from './ad-banner/hero-job-ad.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -20,6 +25,12 @@ import { MaterialModule } from './shared/material.module';
 import { EventsComponent } from './events/events.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
 import { GooglePlacesDirective } from './google-places.directive';
+import { UsersService } from './services/users.ervice';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { TodolistComponent } from './todolist/todolist.component';
+import { UserslistComponent } from './userslist/userslist.component';
+import { PostFeedComponent } from './post-feed/post-feed.component';
 // import { CcLogoDirective } from './cc-logo.directive';
 
 @NgModule({
@@ -34,8 +45,17 @@ import { GooglePlacesDirective } from './google-places.directive';
     EventsComponent,
     EventDetailsComponent,
     GooglePlacesDirective,
+    AdBannerComponent,
+    HeroJobAdComponent,
+    HeroProfileComponent,
+    AdDirective,
+    GalleryComponent,
+    TodolistComponent,
+    UserslistComponent,
+    PostFeedComponent
     // CcLogoDirective,
   ],
+  entryComponents: [HeroJobAdComponent,HeroProfileComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -45,7 +65,9 @@ import { GooglePlacesDirective } from './google-places.directive';
     MaterialModule
   ],
   providers: [
-    
+    UsersService,
+    AdService,
+    FeedService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,3 +1,5 @@
+import { AdService } from './services/ad.service';
+import { AdItem } from './shared/ad-item';
 import { Component, OnInit, NgZone } from '@angular/core';
 
 
@@ -9,13 +11,16 @@ import { Component, OnInit, NgZone } from '@angular/core';
 export class AppComponent  implements OnInit {
   title = 'angular7-curdapp';
   public clickedEvent: Event;
-
+  ads: AdItem[];
   public addrKeys: string[];
   public addr: object;
-  constructor( private zone: NgZone){}
+  constructor( private zone: NgZone, private adService: AdService){
+
+
+  }
 
   ngOnInit() {
-  
+    this.ads = this.adService.getAds();
   }
 
   childEventClicked(event: Event) {
@@ -24,12 +29,14 @@ export class AppComponent  implements OnInit {
 
    //Method to be invoked everytime we receive a new instance 
   //of the address object from the onSelect event emitter.
-  setAddress(addrObj) {
+  //setAddress(addrObj) {
      //We are wrapping this in a NgZone to reflect the changes
     //to the object in the DOM.
-    this.zone.run(() => {
-      this.addr = addrObj;
-      this.addrKeys = Object.keys(addrObj);
-    });
-  }
+  //   this.zone.run(() => {
+  //     this.addr = addrObj;
+  //     this.addrKeys = Object.keys(addrObj);
+  //   });
+  // }
 }
+
+
