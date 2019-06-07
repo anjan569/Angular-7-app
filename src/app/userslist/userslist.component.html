@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th *ngFor="let keyLabel of keys">{{ keyLabel | uppercase}}</th>
+  </tr>
+  <tr *ngFor="let user of users" (click)="onSelect(user)">
+    <td *ngFor="let keyLabel of keys">
+      {{ user[keyLabel]  }}
+    </td>
+    <td>
+      <a href="#"> Posts </a>
+
+    </td>
+  </tr>
+</table>

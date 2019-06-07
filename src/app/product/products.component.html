@@ -1,0 +1,29 @@
+<mat-form-field>
+  <mat-select placeholder="Favorite food" [(ngModel)]="selectedFood1"  (selectionChange)="selectProduct($event)">
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field> 
+{{message}}   
+<div>
+    <h1>Dashboard Layout</h1>
+    <p>
+      <a routerLink="admin"> Admin </a> |
+      <button (click)="logout()"> Logout</button>
+    </p>
+    <router-outlet></router-outlet>
+</div>
+<!-- <ul *ngIf="keys">
+  <li *ngFor="let keyLbl of keys" (click)="onSelect(keyLbl)">
+    {{keyLbl}}
+  </li>
+</ul> -->
+
+<!-- <div  class="example-table-container">
+  
+<h1>Above the projected content</h1>
+<ng-content></ng-content>
+<p>Below the projected content</p>
+
+</div> -->
